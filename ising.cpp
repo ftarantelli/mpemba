@@ -264,7 +264,7 @@ E = C;
 cx_dvec temp_gs(C.states);
 
 int events = int(tmax/dt);
-std::cout << tmax << "  " << hf << "\n";
+//std::cout << tmax << "  " << hf << "\n";
 //exit(8);
 
 
@@ -311,8 +311,8 @@ for(int inx=0; inx <= events; ++inx) {
 		//if((sum + dt/tau) * std::pow(upsilon, 15./23.) * std::pow(Lsize, 15./8.) >= abs(sigma)) {
 		C.Measure(3);
 
-		if( abs(C.Mval-Mtemp) < std::pow(10., -7.)  ){
-			std::cout << inx << "\n";
+		if( abs(C.Mval-Mtemp) < std::pow(10., -12.)  ){
+			//std::cout << inx << "\n";
 			break;
 		}
 		E.Ham = C.Ham;
